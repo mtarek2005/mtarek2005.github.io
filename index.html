@@ -201,13 +201,13 @@
 		for (const copied of copy) { 
 		  copied.onclick = function() { 
 		    document.execCommand("copy"); 
+		    chgTxt();
 		  };  
 		  copied.addEventListener("copy", function(event) { 
 		    event.preventDefault(); 
 		    if (event.clipboardData) { 
 		      event.clipboardData.setData("text/plain","mtarek2005#0658");
 		      console.log(event.clipboardData.getData("text"));
-		      chgTxt();
 		    };
 		  });
 		};
