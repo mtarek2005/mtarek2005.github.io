@@ -57,10 +57,10 @@
 		  </tr>
 		  <tr>
 			<td>
-              <a href="https://www.instagram.com/mtarek2005" target="_blank" rel="nofollow" title="Discord"><img src="/discord.svg"></a>
+              <a class="copy" title="Discord"><img src="/discord.svg"></a>
 			</td>
 			<td>
-              <a href="https://www.instagram.com/mtarek2005" target="_blank" rel="nofollow" title="Discord">mtarek2005#0658</a>
+              <a class="copy" id="txt" title="Discord">mtarek2005#0658</a>
 			</td>
 		  </tr>
 		  <tr>
@@ -193,6 +193,33 @@
 		  </tr>
 		</table>
             </div>
+	<script>
+		let textNeutral="mtarek2005#0658 (Click to copy)";
+		let textClicked="mtarek2005#0658 (Copied!)";
+		var copy = document.querySelectorAll(".copy"); 
+
+		for (const copied of copy) { 
+		  copied.onclick = function() { 
+		    document.execCommand("copy"); 
+		  };  
+		  copied.addEventListener("copy", function(event) { 
+		    event.preventDefault(); 
+		    if (event.clipboardData) { 
+		      event.clipboardData.setData("text/plain","mtarek2005#0658");
+		      console.log(event.clipboardData.getData("text"));
+		      chgTxt();
+		    };
+		  });
+		};
+		
+		function rstTxt() {
+		  document.querySelector("#txt").innerText=textNeutral;
+		}
+		function chgTxt() {
+		  document.querySelector("#txt").innerText=textNeutral;
+		  setTimeout(1500,rstTxt);
+		}
+	</script>
 </body>
 
 </html>
