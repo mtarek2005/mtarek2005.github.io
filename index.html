@@ -196,8 +196,7 @@
 	<script>
 		let textNeutral="mtarek2005#0658";
 		let textClicked="mtarek2005#0658 (Copied!)";
-		var copy = document.querySelectorAll(".copy"); 
-		rstTxt();
+		var copy = document.querySelectorAll(".copy");
 		for (const copied of copy) { 
 		  copied.onclick = function() { 
 		    document.execCommand("copy"); 
@@ -210,7 +209,8 @@
 		      console.log(event.clipboardData.getData("text"));
 		    };
 		  });
-		};
+		}; 
+		rstTxt();
 		
 		function rstTxt() {
 		  document.querySelector("#txt").innerText=textNeutral;
