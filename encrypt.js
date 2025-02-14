@@ -25,5 +25,7 @@ let ciphertext = await globalThis.crypto.subtle.encrypt(
     key,
     encoded
 );
+let rawkey=await globalThis.crypto.subtle.exportKey("raw",key);
+console.log("/more.html?k="+Buffer.from(rawkey).toString('base64url'));
 writeFileSync("encrypted_more",Buffer.from(ciphertext));
-writeFileSync("key",globalThis.btoa(await globalThis.crypto.subtle.exportKey("raw",key)));
+writeFileSync("key",Buffer.from(rawkey).toString('base64url'));

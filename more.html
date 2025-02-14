@@ -1,4 +1,5 @@
 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -42,19 +43,22 @@
     }
   </style>
   <script>
-	document.onload+=async ()=>{
-		let rawKey = atob('W29iamVjdCBBcnJheUJ1ZmZlcl0=');
-		let counter = Uint8Array([
+	/*document.onload+=*/
+	const f=async ()=>{
+		const url = new URL(document.location.href);
+		let rawKey = Uint8Array.fromBase64(url.searchParams.get("k"),{alphabet:"base64url"});
+		let counter = new Uint8Array([
 			211, 165, 130, 105, 174,
 			195, 233,  67, 222, 222,
 			130,  77, 118,  80, 254,
 			109
 		]);
-		let key = window.crypto.subtle.importKey("raw", rawKey, "AES-CTR", true, [
+		let key = await window.crypto.subtle.importKey("raw", rawKey, "AES-CTR", true, [
 			"encrypt",
 			"decrypt",
 		]);
-		let encrypted=await (await fetch("encrypted_more")).arrayBuffer();
+		let fetched=await fetch("encrypted_more")
+		let encrypted=await fetched.arrayBuffer();
 		let decrypted=await window.crypto.subtle.decrypt(
 			{
 				name: "AES-CTR",
@@ -66,7 +70,8 @@
 		);
 		let data = new TextDecoder().decode(decrypted);
 		document.querySelector("body").innerHTML=data;
-	}
+	};
+	f().then(()=>{});
   </script>
 </head>
 
