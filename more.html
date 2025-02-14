@@ -41,193 +41,37 @@
 	  }
     }
   </style>
+  <script>
+	document.onload+=async ()=>{
+		let rawKey = atob('W29iamVjdCBBcnJheUJ1ZmZlcl0=');
+		let counter = Uint8Array([
+			211, 165, 130, 105, 174,
+			195, 233,  67, 222, 222,
+			130,  77, 118,  80, 254,
+			109
+		]);
+		let key = window.crypto.subtle.importKey("raw", rawKey, "AES-CTR", true, [
+			"encrypt",
+			"decrypt",
+		]);
+		let encrypted=await (await fetch("encrypted_more")).arrayBuffer();
+		let decrypted=await window.crypto.subtle.decrypt(
+			{
+				name: "AES-CTR",
+				counter,
+				length: 64
+			},
+			key,
+			encrypted
+		);
+		let data = new TextDecoder().decode(decrypted);
+		document.querySelector("body").innerHTML=data;
+	}
+  </script>
 </head>
 
 <body>
-<h1>Follow me on <img src="+20%20114%20079%203005%2020200826_111041.jpg" style="display:none"/></h1>
-<div>
-		<table style="margin: auto;background: #e4e4e4ab;padding: 7;border-radius: 15pt;width: fit-content;">
-		  <tr>
-		    <td>
-              <a href="https://www.facebook.com/mtarek.zo.1" target="_blank" rel="nofollow" title="Facebook"><img src="/facebook.svg"></a>
-			</td>
-		    <td>
-              <a href="https://www.facebook.com/mtarek.zo.1" target="_blank" rel="nofollow" title="Facebook">Mtarek </a>
-			</td>
-		  </tr>
-		  <tr>
-			<td>
-              <a class="copy" title="Discord"><img src="/discord.svg"></a>
-			</td>
-			<td>
-              <a class="copy" id="txt" title="Discord">mtarek2005#0658</a>
-			</td>
-		  </tr>
-		  <tr>
-			<td>
-              <a href="https://www.instagram.com/mtarek_priv" target="_blank" rel="nofollow" title="Instagram"><img src="/instagram.svg"></a>
-			</td>
-			<td>
-              <a href="https://www.instagram.com/mtarek_priv" target="_blank" rel="nofollow" title="Instagram">mtarek_priv</a>
-			</td>
-		  </tr>
-		  <tr>
-			<td>
-              <a href="https://twitter.com/mtarek2005yt" target="_blank" rel="nofollow" title="Twitter"><img src="/twitter.svg"></a>
-			</td>
-			<td>
-              <a href="https://twitter.com/mtarek2005yt" target="_blank" rel="nofollow" title="Twitter">mtarek2005YT</a>
-			</td>
-		  </tr>
-		  <tr>
-			<td>
-              <a href="https://mstdn.social/@mtarek2005" target="_blank" rel="me" title="Mastodon"><img src="/mastodon.png"></a>
-			</td>
-			<td>
-              <a href="https://mstdn.social/@mtarek2005" target="_blank" rel="me" title="Mastodon">@mtarek2005@mstdn.social</a>
-			</td>
-		  </tr>
-		  <tr>
-			<td>
-              <a href="https://www.snapchat.com/add/mtarek2005" target="_blank" rel="nofollow" title="Snapchat"><img src="/snapchat.svg"></a>
-			</td>
-			<td>
-              <a href="https://www.snapchat.com/add/mtarek2005" target="_blank" rel="nofollow" title="Snapchat">mtarek2005</a>
-			</td>
-		  </tr>
-		  <tr>
-			<td>
-              <a href="tel:+201140793005" target="_blank" rel="nofollow" title="Call"><img src="/phone-symbol.svg"></a>
-			</td>
-			<td>
-              <a href="tel:+201140793005" target="_blank" rel="nofollow" title="Call">+201140793005</a>
-			</td>
-		  </tr>
-		  <tr>
-			<td>
-              <a href="https://api.whatsapp.com/send?phone=201140793005" target="_blank" rel="nofollow" title="WhatsApp"><img src="/WhatsApp.svg"></a>
-			</td>
-			<td>
-              <a href="https://api.whatsapp.com/send?phone=201140793005" target="_blank" rel="nofollow" title="WhatsApp">+201140793005</a>
-			</td>
-		  </tr>
-		  <tr>
-			<td>
-              <a href="https://www.reddit.com/user/mtarek2005" target="_blank" rel="nofollow" title="Reddit"><img src="/reddit.svg"></a>
-			</td>
-			<td>
-              <a href="https://www.reddit.com/user/mtarek2005" target="_blank" rel="nofollow" title="Reddit">u/mtarek2005</a>
-			</td>
-		  </tr>
-		  <tr>
-			<td>
-              <a href="https://github.com/mtarek2005" target="_blank" rel="nofollow" title="GitHub"><img src="/github.svg"></a>
-			</td>
-			<td>
-              <a href="https://github.com/mtarek2005" target="_blank" rel="nofollow" title="GitHub">mtarek2005</a>
-			</td>
-		  </tr>
-		  <tr>
-			<td>
-              <a href="https://www.tiktok.com/@mtarek2005" target="_blank" rel="nofollow" title="TikTok"><img src="/tiktok.svg"></a>
-			</td>
-			<td>
-              <a href="https://www.tiktok.com/@mtarek2005" target="_blank" rel="nofollow" title="TikTok">@mtarek2005</a>
-			</td>
-		  </tr>
-		  <tr>
-			<td>
-              <a href="https://aminoapps.com/u/mtarek2005" target="_blank" rel="nofollow" title="Amino"><img src="/amino-1.svg"></a>
-			</td>
-			<td>
-              <a href="https://aminoapps.com/u/mtarek2005" target="_blank" rel="nofollow" title="Amino">mtarek2005</a>
-			</td>
-		  </tr>
-		  <tr>
-			<td>
-              <a href="https://www.youtube.com/@mtarek2005" target="_blank" rel="nofollow" title="YouTube"><img src="/youtube.svg"></a>
-			</td>
-			<td>
-              <a href="https://www.youtube.com/@mtarek2005" target="_blank" rel="nofollow" title="YouTube">Mohamed the Master</a>
-			</td>
-		  </tr>
-		  <tr>
-			<td>
-              <a href="https://twitch.tv/mtarek2005" target="_blank" rel="nofollow" title="Twitch"><img src="/twitch.svg"></a>
-			</td>
-			<td>
-              <a href="https://twitch.tv/mtarek2005" target="_blank" rel="nofollow" title="Twitch">mtarek2005</a>
-			</td>
-		  </tr>
-		  <tr>
-			<td>
-              <a href="https://mixer.com/mtarek2005" target="_blank" rel="nofollow" title="Mixer"><img src="/mixer.svg"></a>
-			</td>
-			<td>
-              <a href="https://mixer.com/mtarek2005" target="_blank" rel="nofollow" title="Mixer">mtarek2005</a>
-			</td>
-		  </tr>
-		  <tr>
-			<td>
-              <a href="https://steamcommunity.com/id/mtarek2005" target="_blank" rel="nofollow" title="Steam"><img src="/steam.svg"></a>
-			</td>
-			<td>
-              <a href="https://steamcommunity.com/id/mtarek2005" target="_blank" rel="nofollow" title="Steam">mtarek2005</a>
-			</td>
-		  </tr>
-		  <tr>
-		    <td>
-              <a href="https://open.spotify.com/user/31en465k2lunvecl53a6orzylllq?si=eKwcXtutQNiVJQn78FBU2A" target="_blank" rel="nofollow" title="Spotify"><img src="/spotify.svg"></a>
-			</td>
-		    <td>
-              <a href="https://open.spotify.com/user/31en465k2lunvecl53a6orzylllq?si=eKwcXtutQNiVJQn78FBU2A" target="_blank" rel="nofollow" title="Spotify">Mtarek Zo</a>
-			</td>
-		  </tr>
-		  <tr>
-			<td>
-              <a href="https://soundcloud.com/mohamad-the-master" target="_blank" rel="nofollow" title="SoundCloud"><img src="/soundcloud.svg"></a>
-			</td>
-			<td>
-              <a href="https://soundcloud.com/mohamad-the-master" target="_blank" rel="nofollow" title="SoundCloud">Mohamed the Master</a>
-			</td>
-		  </tr>
-		  <tr>
-		    <td>
-              <a href="https://play.anghami.com/profile/94335570" target="_blank" rel="nofollow" title="Anghami"><img src="/Anghami.jpg"></a>
-			</td>
-		    <td>
-              <a href="https://play.anghami.com/profile/94335570" target="_blank" rel="nofollow" title="Anghami">Mohamad the master</a>
-			</td>
-		  </tr>
-		</table>
-            </div>
-	<script>
-		let textNeutral="mtarek2005#0658";
-		let textClicked="mtarek2005#0658 (Copied!)";
-		var copy = document.querySelectorAll(".copy");
-		for (const copied of copy) { 
-		  copied.onclick = function() { 
-		    document.execCommand("copy"); 
-		    chgTxt();
-		  };  
-		  copied.addEventListener("copy", function(event) { 
-		    event.preventDefault(); 
-		    if (event.clipboardData) { 
-		      event.clipboardData.setData("text/plain","mtarek2005#0658");
-		      console.log(event.clipboardData.getData("text"));
-		    };
-		  });
-		}; 
-		rstTxt();
-		
-		function rstTxt() {
-		  document.querySelector("#txt").innerText=textNeutral;
-		}
-		function chgTxt() {
-		  document.querySelector("#txt").innerText=textClicked;
-		  setTimeout(rstTxt,1500);
-		}
-	</script>
+	
 </body>
 
 </html>
